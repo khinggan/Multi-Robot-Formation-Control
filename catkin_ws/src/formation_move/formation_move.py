@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 from __future__ import absolute_import
 from __future__ import division
@@ -15,13 +15,13 @@ import yaml
 
 directory = os.path.join(os.path.dirname(os.path.realpath(__file__)), '../python')
 sys.path.insert(0, directory)
-import rrt
+import python.rrt as rrt
 
 directory = os.path.join(os.path.dirname(os.path.realpath(__file__)), '/velocity_controller')
 sys.path.insert(0, directory)
-from init_formations import FORMATION, LEADER_ID, MAP_PARAMS, RUN_RRT
-import get_combined_velocity as gcv
-import rrt_navigation
+from velocity_controller.init_formations import FORMATION, LEADER_ID, MAP_PARAMS, RUN_RRT
+import velocity_controller.get_combined_velocity as gcv
+from velocity_controller import rrt_navigation
 
 
 # Robot motion commands:
@@ -165,9 +165,9 @@ def run():
     groundtruths[i] = GroundtruthPose(name)
 
   # Load map. (in here so it is only computed once)
-  with open(os.path.expanduser('~/catkin_ws/src/exercises/project/python/{}.yaml'.format(MAP))) as fp:
-    data = yaml.load(fp)
-  img = rrt.read_pgm(os.path.expanduser('~/catkin_ws/src/exercises/project/python/{}.pgm'.format(MAP)), data['image'])
+  with open(os.path.expanduser('~/my_research/Multi-Robot-Formation-Control/catkin_ws/src/formation_move/python/{}.yaml'.format(MAP)), "r") as fp:
+    data = yaml.safe_load(fp)
+  img = rrt.read_pgm(os.path.expanduser('~/my_research/Multi-Robot-Formation-Control/catkin_ws/src/formation_move/python/{}.pgm'.format(MAP)), data['image'])
   occupancy_grid = np.empty_like(img, dtype=np.int8)
   occupancy_grid[:] = UNKNOWN
   occupancy_grid[img < .1] = OCCUPIED

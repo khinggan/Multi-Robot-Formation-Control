@@ -12,7 +12,7 @@ import sys
 
 directory = os.path.join(os.path.dirname(os.path.realpath(__file__)), '../ros/velocity_controller')
 sys.path.insert(0, directory)
-from init_formations import MAP_PARAMS
+from velocity_controller.init_formations import MAP_PARAMS
 
 X = 0
 Y = 1

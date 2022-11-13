@@ -2,8 +2,8 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
-from rrt_navigation import feedback_linearized
-from init_formations import INITIAL_YAW
+from velocity_controller.rrt_navigation import feedback_linearized
+from velocity_controller.init_formations import INITIAL_YAW
 
 import numpy as np
 
