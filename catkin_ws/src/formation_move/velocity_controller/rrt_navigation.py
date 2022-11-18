@@ -3,7 +3,7 @@ from __future__ import division
 from __future__ import print_function
 
 import numpy as np
-import python.rrt
+from python import rrt
 
 SPEED = .5
 
