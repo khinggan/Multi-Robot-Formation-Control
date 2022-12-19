@@ -9,14 +9,14 @@ SPACING_DIST = 0.3 + ROBOT_RADIUS
 # NOTE:
 # In leader follower, only the followers need be defined in the formation.
 
-LEADER_ID = 2
+# LEADER_ID = 0
 INITIAL_YAW = 1.571
 LINE = np.array([[2*SPACING_DIST,0],
                  [SPACING_DIST, 0],
                  [-SPACING_DIST, 0],
                  [-2*SPACING_DIST, 0]])
 
-# LEADER_ID = 2
+LEADER_ID = 2
 # INITIAL_YAW = 1.571
 COLUMN = np.array([[0, 2*SPACING_DIST],
                    [0, SPACING_DIST],
@@ -99,4 +99,4 @@ RUN_RRT = False
 
 ALLOW_FORMATION_ROTATION = True
 
-FORMATION = LINE
+FORMATION = COLUMN
