@@ -5,9 +5,10 @@ catkin_ws/.catkin_workspace
 catkin_ws/src/turtlebot3
 catkin_ws/src/turtlebot3_msgs
 catkin_ws/src/turtlebot3_simulations
+out.ogv
 
 # Byte-compiled / optimized / DLL files
-__pycache__/
+catkin_ws/src/formation_move/velocity_controller/__pycache__/
 *.py[cod]
 *$py.class
 

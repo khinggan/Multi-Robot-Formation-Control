@@ -19,7 +19,7 @@ $ git clone https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
 ```
 
 ## To Run
-- Go to init_formations.py and set MAP_PARAMS(line 95), FORMATION(line 102), LEADER_ID(line 12) to what you want (e.g SIMPLE_MAP, COLUMN, 0; They means using simple map, column formation and leader is the first robot)
+- Go to init_formations.py and set MAP_PARAMS(line 95), FORMATION(line 102), LEADER_ID(line 12) to what you want (e.g SIMPLE_MAP, COLUMN, 2; They means using simple map, column formation and leader is the central robot)
 - launch formation produce process; eg: roslaunch formation_move simple_column.launch
 - run formation_move.launch: roslaunch formation_move formation_move.launch
 
